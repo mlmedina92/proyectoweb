@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- libreria de iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
+
 
 </head>
 
@@ -27,26 +27,23 @@
                 <li>
                     <a href="/"><img src="css/image/logo.png" alt="logo" loading="lazy" height="67" width="75"></a>
                 </li>
-
                 <li><a href=""></a>Inicio </li>
                 <li><a href=""></a>Nosotros</li>
                 <li><a href=""></a>Galeria </li>
             </ul>
-
-            <ul class="nav-conteiner-mobile">
-                <li>
-                    <a href="/"><img src="css/image/logo.png" alt="logo" loading="lazy" height="67" width="75"></a>
-                </li>
-                <button class="menu-btn" id="navbarBurger">
-                    <i class="fas fa-bars"></i>
-                </button>       
-            </ul>
-            
-            <div class="mobile-menu-desplegable">
-                <ul>
-                    <li><a href=""></a>Inicio </li>
-                    <li><a href=""></a>Nosotros</li>
-                    <li><a href=""></a>Galeria </li>
+            <div class="nav-conteiner-mobile">
+                <ul class="nav-first-container">
+                    <li>
+                        <a href="/"><img src="css/image/logo.png" alt="logo" loading="lazy" height="67" width="75"></a>
+                    </li>
+                    <button class="menu-btn" id="navbarBurger">
+                        <i class="fas fa-bars" id="burgerIcon"></i>
+                    </button>
+                </ul>
+                <ul id="mobile-menu-desplegable" class="hidden">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Nosotros</a></li>
                 </ul>
             </div>
         </nav>
@@ -55,8 +52,8 @@
         <section class="banner-section">
             <h6 class="motto">grúas en movimiento, soluciones directas</h6>
             <h1 class="slogan">Levantando proyectos</h1>
-            
-            <button id="btn-presupuesto" class="buttonPresup">Pedí tu presupuesto</button>
+
+            <button id="btn-presupuesto" class="buttonBudget">Pedí tu presupuesto</button>
         </section>
 
         <section class="global-container">

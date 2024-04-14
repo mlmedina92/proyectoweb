@@ -83,33 +83,6 @@ a {
     text-decoration: none;
 }
 
-.buttonPresup {
-    font-family: "Teko", Sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1.3em;
-    letter-spacing: 1px;
-    color: #08163B;
-    background-color: #FDB300;
-    border: none;
-    padding: 20px 40px 20px 40px;
-}
-
-.buttonPresup:hover {
-    background-color: #dba21d;
-    cursor: pointer;
-}
-
-.buttonPresup:focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-
-.buttonPresup::after {
-    content: "\003e";
-    margin-left: 5px;
-    /* Espacio entre el símbolo y el texto */
-}
 
 .global-container {
     padding: 0% 7%;
@@ -126,7 +99,7 @@ a {
 }
 
 .col-1-50 {
-    margin-right: 7%;
+    /* margin-right: 7%; */
 }
 
 /*----------------------------NAVBAR----------------*/
@@ -134,16 +107,21 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: red;
+    background-color:#08163B;
+    font-family: "Teko", Sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.4em;
+    letter-spacing: 1px;
+}
+
+.nav-conteiner-desktop ul li a{
+    color: white;
 }
 
 .nav-conteiner-mobile {
     display: none;
 
-}
-
-.mobile-menu-desplegable{
-    display: none;
 }
 
 /* Media Query section presentation NAVBAR */
@@ -152,25 +130,80 @@ a {
         display: none;
     }
 
+
     .nav-conteiner-mobile {
         display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        background-color: #dba21d;
-
+        background-color: #08163B;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
-  
-     /*.mobile-menu-desplegable{
+    .hidden {
         display: none;
-    } */
-    .hidden-mobile {
-        display: flex;
-   
+
     }
 
+    .visible {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+        padding: 2rem;
+
+    }
+
+    .visible li {
+        border-bottom: solid 1px wheat;
+        margin-top:0.5rem;
+    }
+
+    .visible  li a {
+        color: white;
+        font-family: "Teko", Sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        letter-spacing: 1px;
+        
+        border: none;
+        padding: 20px 40px 20px 40px; 
+    }
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        background-color: grey;
+        border: none;
+        height: 26px;
+        width: 26px;
+    }
+
+    .fa-bars {
+        font-size: 1rem;
+        font-style: bold;
+        color: #08163B;
+    }
+
+    .nav-first-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px 3rem;
+    }
 
 }
+
+
+
 
 
 
@@ -205,6 +238,11 @@ a {
     font-weight: 500;
     margin: 1.5% 0;
 }
+
+/* Media Query section presentation Mobile */
+@media only screen and (max-width: 768px) {
+
+    }
 
 /* Presentation styles */
 .presentation {
@@ -249,6 +287,33 @@ p:nth-child(3) {
 
 .´.presentation img {
     width: 100%;
+}
+
+.buttonBudget {
+    font-family: "Teko", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    color: #08163B;
+    background-color: #FDB300;
+    border: none;
+    padding: 20px 40px 20px 40px;
+}
+
+.buttonBudget:hover {
+    background-color: #dba21d;
+    cursor: pointer;
+}
+
+.buttonBudget:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.buttonBudget::after {
+    content: "\003e";
+    margin-left: 5px;
 }
 
 /* Media Query section presentation Tablet */
