@@ -1,0 +1,362 @@
+/* Estrategia: First Desktop */
+
+/* Fuentes descargadas */
+/* Títulos principales: Fuente Teko */
+@font-face {
+    font-family: 'Teko';
+    src: url('font/Teko/static/Teko-Bold.ttf') format('truetype'),
+        url('font/Teko/static/Teko-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Body -tipografia general del sitio */
+@font-face {
+    font-family: 'Rubik';
+    src: url('font/Rubik/static/Rubik-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('font/Rubik/static/Rubik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('font/Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('font/Rubik/static/Rubik-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Estilos generales */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+}
+
+p,
+ul li {
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+    color: #010101;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Teko", Sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    line-height: 1.3em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttonPresup {
+    font-family: "Teko", Sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    color: #08163B;
+    background-color: #FDB300;
+    border: none;
+    padding: 20px 40px 20px 40px;
+}
+
+.buttonPresup:hover {
+    background-color: #dba21d;
+    cursor: pointer;
+}
+
+.buttonPresup:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.buttonPresup::after {
+    content: "\003e";
+    margin-left: 5px;
+    /* Espacio entre el símbolo y el texto */
+}
+
+.global-container {
+    padding: 0% 7%;
+    min-width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-50 {
+    max-width: 50%;
+}
+
+.col-1-50 {
+    margin-right: 7%;
+}
+
+/*----------------------------NAVBAR----------------*/
+.nav-conteiner-desktop {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: red;
+}
+
+.nav-conteiner-mobile {
+    display: none;
+
+}
+
+.mobile-menu-desplegable{
+    display: none;
+}
+
+/* Media Query section presentation NAVBAR */
+@media only screen and (max-width: 768px) {
+    .nav-conteiner-desktop {
+        display: none;
+    }
+
+    .nav-conteiner-mobile {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #dba21d;
+
+    }
+
+  
+     /*.mobile-menu-desplegable{
+        display: none;
+    } */
+    .hidden-mobile {
+        display: flex;
+   
+    }
+
+
+}
+
+
+
+/* ----------------------------HOME------------------ */
+
+/* Banner styles */
+.banner-section {
+    background-image: linear-gradient(to bottom, rgba(8, 22, 59, 0.5), rgba(0, 0, 0, 0.5)), url('image/home/banner-desktop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0% 0%;
+    height: 100vh;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.motto {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.slogan {
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    margin: 1.5% 0;
+}
+
+/* Presentation styles */
+.presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.presentation p,
+ul li {
+    text-align: justify;
+}
+
+.global-container h1 {
+    color: #08163B;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 2% 0% 2% 0%;
+}
+
+.text-presentation p:first-child,
+p:nth-child(3) {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 2%;
+}
+
+.text-presentation p:nth-child(2) {
+    font-weight: 600;
+    color: rgb(88, 84, 84);
+    padding-bottom: 5%;
+
+}
+
+.presentation li::before {
+    content: "⚡";
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+.´.presentation img {
+    width: 100%;
+}
+
+/* Media Query section presentation Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .col-50 {
+        max-width: 85%;
+    }
+
+}
+
+/* Media Query section presentation Mobile */
+@media only screen and (max-width: 768px) {
+    .col-50 {
+        max-width: 85%;
+    }
+
+    .global-container {
+        padding: 0%;
+    }
+
+    .col-1-50 {
+        margin-right: 0%;
+    }
+
+    .global-container {
+        padding: 7% 0%;
+    }
+
+    .text-presentation {
+        padding-bottom: 7%;
+    }
+}
+
+/* Seccion contact styles */
+.contact {
+    display: flex;
+}
+
+/* Footer styles */
+footer {
+    background-color: #08163B;
+    width: 100%;
+    height: 340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1px;
+}
+
+footer h3 {
+    color: white;
+    text-align: left;
+}
+
+.footer-divs {
+    width: 33%;
+}
+
+.footer-divs.imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li,
+a {
+    color: white;
+}
+
+footer a:hover,
+.icon:hover {
+    color: #FDB300;
+}
+
+.social-icon {
+    font-size: 25px;
+    padding-left: 7%;
+}
+
+.footer li {
+    padding-bottom: 8px;
+}
+
+
+/* Media Query section Footer Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* Media Query section Footer Mobile */
+@media only screen and (max-width: 768px) {
+    .footer {
+        height: 540px;
+        text-align: center;
+        display: flex;
+        align-content: start;
+        padding: 2%
+    }
+
+    .footer-divs {
+        width: 100%;
+    }
+
+    .footer-divs.imagen-container {
+        display: none;
+    }
+
+    .social-icon {
+        text-align: center;
+    }
+}
